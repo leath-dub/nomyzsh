@@ -1,7 +1,5 @@
 #!/bin/sh
 
-PLUGIN_DIRECTORY_NAME=.zsh_plugins
-
 case $1 in
   --xdg) ZDOTDIR=$HOME/.config/zsh && mkdir -p $HOME/.config/zsh ;; # install in ~/.config/zsh
   *) ZDOTDIR=$HOME ;; # install in home directory
