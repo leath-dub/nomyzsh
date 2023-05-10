@@ -8,6 +8,7 @@ syntax highlighting and auto suggestions.
 curl -L https://raw.githubusercontent.com/leath-dub/nomyzsh/master/install.sh | sh
 ```
 Yeah thats it ! this will result in a shell that looks like so
+
 ![default config](examples/default.png)
 
 ### Install to ~/.config/zsh ?
