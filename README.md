@@ -3,6 +3,8 @@ No My Zsh is a 42 line long shell script that both sets up plugin management and
 syntax highlighting and auto suggestions.
 
 ## Quick Usage
+Dependencies: `curl`, `git` and `zsh` (ofc)
+
 **Note** this will back up any files it overwrites postfixing them with `.bak`
 ```sh
 curl -L https://raw.githubusercontent.com/leath-dub/nomyzsh/master/install.sh | sh
