@@ -20,20 +20,22 @@ EOF
 }
 
 cat > $ZDOTDIR/.zshrc << 'EOF'
+: ${PLUGINDIR:=$ZDOTDIR/.zsh_plugins}
+
 plug() {
 	PLUGIN_NAME="${1#*/}"
 
 	# create plugin directory if not exists
-	[ ! -d "$ZDOTDIR/.zsh_plugins" ] && mkdir -p $ZDOTDIR/.zsh_plugins
+	[ ! -d "$PLUGINDIR" ] && mkdir -p $PLUGINDIR
 
 	# fetch plugin if not exists
-	[ ! -f "$ZDOTDIR/.zsh_plugins/$PLUGIN_NAME/$2" ] && git clone "https://github.com/$1" $ZDOTDIR/.zsh_plugins/$PLUGIN_NAME
+	[ ! -f "$PLUGINDIR/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh" ] && git clone "https://github.com/$1" $ZDOTDIR/.zsh_plugins/$PLUGIN_NAME
 
-	source "$ZDOTDIR/.zsh_plugins/$PLUGIN_NAME/$2"
+	source "$PLUGINDIR/$PLUGIN_NAME/$PLUGIN_NAME.plugin.zsh"
 }
 
-plug "zdharma-continuum/fast-syntax-highlighting" "fast-syntax-highlighting.plugin.zsh"
-plug "zsh-users/zsh-autosuggestions" "zsh-autosuggestions.plugin.zsh"
+plug "zdharma-continuum/fast-syntax-highlighting"
+plug "zsh-users/zsh-autosuggestions"
 
 autoload -U colors && colors
 export PS1="%{$fg[green]%}%n%{$fg[white]%}@%m %{$fg[green]%}%c%{$fg[white]%}> "

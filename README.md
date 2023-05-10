@@ -23,10 +23,13 @@ Its simple ! if you ran the install script there is a function `plug` in your `.
 can be used to bootstrap plugins. The default config from the `install.sh` script has 2
 plugins already there
 ```sh
-plug "zdharma-continuum/fast-syntax-highlighting" "fast-syntax-highlighting.plugin.zsh"
-plug "zsh-users/zsh-autosuggestions" "zsh-autosuggestions.plugin.zsh"
+plug "zdharma-continuum/fast-syntax-highlighting"
+plug "zsh-users/zsh-autosuggestions"
 ```
-`plug` takes 2 arguments, `<github user>/<repository name>` and `<path to plugin entry point relative to git repo>`
+`plug` takes 1 argument, `<github user>/<repository name>`
+
+## Change plugin Directory ?
+Just edit the $PLUGINDIR variable before you call `plug` function
 
 ## Is this a Joke ?
 Kinda. I find it funny that people use `oh-my-zsh` but also painful as plugins are actually incredibly simple
