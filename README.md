@@ -31,5 +31,5 @@ in zsh. This repo is also not necessary but it does automate it such that the ba
 as low as `oh-my-zsh`, hopefully this project will stop the madness.
 
 ## Contributions
-Open an PR or an issue, please tell me how I am wrong. This project is MIT licensed so feel free to
+Open an PR or an issue, please tell me how I am wrong. This project is WTFPL licensed so feel free to
 use it Elon !.
